@@ -11,13 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\testMovingLeastSquares\MovingLeastSquares.cpp" />
-    <ClCompile Include="..\..\..\Source\testMovingLeastSquares\testMovingLeastSquares_main.cpp" />
+    <ClCompile Include="..\..\..\test\testMovingLeastSquares\MovingLeastSquares.cpp" />
+    <ClCompile Include="..\..\..\test\testMovingLeastSquares\testMovingLeastSquares_main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\IDeformer.h" />
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\IMeshGrid.h" />
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\MovingLeastSquares.h" />
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\IDeformer.h" />
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\IMeshGrid.h" />
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\MovingLeastSquares.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -59,7 +59,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../../../Common/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,7 +73,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../../../Common/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

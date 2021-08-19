@@ -114,7 +114,7 @@ void MovingLeastSquares::PrecomputeAffineA( IMatrix<float>& w, IMatrix<float>& A
 	Vec2f p_star;
 	ComputeWCentroids( p_star, p, w );// Can be precomputed from p and v
 
-	Matrix<float> p_hats( p.numRows(), p.numCols() );// = p;
+	DynamicMatrix<float> p_hats( p.numRows(), p.numCols() );// = p;
 	ComputeHats( p_hats, p, p_star );// Can be precomputed from p and v
 
 	Matrix<float, 2, 2> ptwp, ptwp_inv;
@@ -166,8 +166,8 @@ void MovingLeastSquares::PrecomputeAffineA( IMatrix<float>& w, IMatrix<float>& A
 void MovingLeastSquares::PrecomputeAffineAs( const IMatrix<float>& p, const OreOreLib::Array<Vec2f>& v, float alpha )
 {
 	// Precompute w
-	Matrix<float> As( p.numRows(), v.Length() );
-	Matrix<float> Ws( p.numRows(), v.Length() );
+	DynamicMatrix<float> As( p.numRows(), v.Length() );
+	DynamicMatrix<float> Ws( p.numRows(), v.Length() );
 
 	//for( int i=0; i<v.Length(); ++i )
 	//{
@@ -182,12 +182,12 @@ void MovingLeastSquares::PrecomputeAffineAs( const IMatrix<float>& p, const OreO
 
 
 
-Vec2f MovingLeastSquares::TransformAffine( const IMatrix<float>& q, IMatrix<float>& w, const fArray& A )
+Vec2f MovingLeastSquares::TransformAffine( const IMatrix<float>& q, IMatrix<float>& w, const OreOreLib::Array<float>& A )
 {
 	Vec2f q_star;
 	ComputeWCentroids( q_star, q, w );
 	
-	Matrix<float> q_hats( q.numRows(), q.numCols() );
+	DynamicMatrix<float> q_hats( q.numRows(), q.numCols() );
 	ComputeHats( q_hats, q, q_star );
 
 	Vec2f Fa = q_star;
@@ -219,7 +219,7 @@ void MLSDeformer::Update()
 		w.Init( m_W, 0, i, m_refController.NumHandles(), 1 );
 		A.Init( m_A, 0, i, m_refController.NumHandles(), 1 );
 
-		m_MLSSolver.PrecomputeAffineA( w, A, p, v, alpha )
+//		m_MLSSolver.PrecomputeAffineA( w, A, p, v, alpha )
 
 	}
 

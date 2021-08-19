@@ -3,10 +3,12 @@
 
 
 #include	<oreore/container/StaticArray.h>
-#include	<oreore/Vector.h>
-//#include	<oreore/mathlib/MathLib.h>
-#include	<oreore/matrixlib/MatrixLib.h>
-#include	<oreore/matrixlib/LU.h>
+//#include	<oreore/mathlib/GraphicsMath.h>//#include	<oreore/mathlib/MathLib.h>
+
+
+#include	<matrixlib/MatrixLib.h>
+#include	<matrixlib/VectorOperations.h>
+#include	<matrixlib/LU.h>
 
 
 #include	"IDeformer.h"
@@ -136,7 +138,7 @@ public:
 		: m_DimX(xdim)
 		, m_DimY(ydim)
 	{
-		m_Vertices.Allocate( m_DimX * m_DimY, 2 );
+		m_Vertices.Init( m_DimX * m_DimY, 2 );
 	}
 
 
@@ -148,7 +150,7 @@ public:
 
 	const Vec2f& At( int x, int y )
 	{
-		return m_Vertices[ y*m_DimY + x ];
+		return (Vec2f&)m_Vertices( y*m_DimY + x );
 	}
 
 
@@ -170,7 +172,7 @@ public:
 	}
 
 
-	const Matrix<float>& V() const
+	const DynamicMatrix<float>& V() const
 	{
 		return m_Vertices;
 	}
@@ -180,7 +182,7 @@ public:
 private:
 
 	int m_DimX, m_DimY;
-	Matrix<float>	m_Vertices;	// num of vertices * dim(=2)
+	DynamicMatrix<float>	m_Vertices;	// num of vertices * dim(=2)
 
 
 };
@@ -231,7 +233,7 @@ public:
 
 
 	void PrecomputeAffineA( IMatrix<float>& w, IMatrix<float>& A, const IMatrix<float>& p, const Vec2f& v, float alpha );
-	Vec2f TransformAffine( const IMatrix<float>& q, IMatrix<float>& w, const fArray& A );
+	Vec2f TransformAffine( const IMatrix<float>& q, IMatrix<float>& w, const OreOreLib::Array<float>& A );
 
 
 	void PrecomputeAffineAs( const IMatrix<float>& p, const OreOreLib::Array<Vec2f>& v, float alpha );
@@ -287,7 +289,7 @@ private:
 	Controller& m_refController;
 
 	// Intermediate buffers for Affine
-	Matrix<float>			m_W,		// num of p * num of v
+	DynamicMatrix<float>	m_W,		// num of p * num of v
 							m_A,		// num of p * num of v
 							m_Pstar,	// num of v * dim(=2)
 							m_Ph_x,		// num of p * num of v

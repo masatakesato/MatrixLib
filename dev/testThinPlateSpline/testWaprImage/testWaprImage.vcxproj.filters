@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\testThinPlateSpline\testWaprImage_main.cpp">
+    <ClCompile Include="..\..\..\test\testThinPlateSpline\testWaprImage_main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\testThinPlateSpline\ThinPlateSpline.cpp">
+    <ClCompile Include="..\..\..\test\testThinPlateSpline\ThinPlateSpline.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\testThinPlateSpline\ThinPlateSpline.h">
+    <ClInclude Include="..\..\..\test\testThinPlateSpline\ThinPlateSpline.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

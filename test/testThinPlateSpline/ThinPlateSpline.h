@@ -3,8 +3,9 @@
 
 
 #include	<oreore/MathLib.h>
-#include	<oreore/matrixlib/MatrixLib.h>
-#include	<oreore/matrixlib/LU.h>
+
+#include	<matrixlib/MatrixLib.h>
+#include	<matrixlib/LU.h>
 
 
 
@@ -28,7 +29,7 @@ public:
 
 protected:
 
-	Matrix<float>	m_A, m_x, m_b;	// L, P, Pt
+	DynamicMatrix<float>	m_A, m_x, m_b;	// L, P, Pt
 
 	MatrixView<float>	m_K, m_P, m_Pt,
 						m_w, m_a;
@@ -39,7 +40,7 @@ protected:
 	int	m_NumControlPoints;
 	int	m_MatSize;
 
-	Matrix<float>	m_U;
+	DynamicMatrix<float>	m_U;
 
 
 

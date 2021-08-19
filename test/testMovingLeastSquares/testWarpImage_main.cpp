@@ -17,8 +17,8 @@ int main()
 
 	//====================== Read Image ======================//
 
-	FREE_IMAGE_FORMAT fif	= FreeImage_GetFileType("V:/sampleimages/image.png", 0);
-	FIBITMAP* bitmap = FreeImage_Load( fif, "V:/sampleimages/image.png" );
+	FREE_IMAGE_FORMAT fif	= FreeImage_GetFileType( "../../../test/images/checkerboard.png", 0 );
+	FIBITMAP* bitmap = FreeImage_Load( fif, "../../../test/images/checkerboard.png" );
 
 	unsigned width	= FreeImage_GetWidth( bitmap );
 	unsigned height	= FreeImage_GetHeight( bitmap );
@@ -54,16 +54,16 @@ int main()
 	InitVec( targetPoints[ NUM_X + 1 ], 1.0f, 1.5f );
 
 
-	MovingLeastSquares mls;
+//	MovingLeastSquares mls;
 
-	mls.PrecomputeAffineA()
+//	mls.PrecomputeAffineA()
 
-	//mls.Init(2, controlPoints.Length() );
-	//mls.Update( controlPoints );
-	//mls.Solve( targetPoints );
+//	mls.Init(2, controlPoints.Length() );
+//	mls.Update( controlPoints );
+//	mls.Solve( targetPoints );
 
 
-//	RGBQUAD pixcolor;
+	RGBQUAD pixcolor;
 
 	for( unsigned y=0; y<height; ++y )
 	{
@@ -76,9 +76,9 @@ int main()
 
 			Subtract( diff, v, v2 );
 			Add( v, diff );
-			auto x_ = unsigned(v2.x*width);
-			auto y_	= unsigned(v2.y*height);
-			FreeImage_GetPixelColor( bitmap, Clamp(unsigned(v.x*width/2), unsigned(0), width-1), Clamp(unsigned(v.y*height/2), unsigned(0), height-1), &pixcolor );
+			auto x_ = unsigned( v2(0) * width );
+			auto y_	= unsigned( v2(1) * height );
+			FreeImage_GetPixelColor( bitmap, Clamp(unsigned(v(0)*width/2), unsigned(0), width-1), Clamp(unsigned(v(1)*height/2), unsigned(0), height-1), &pixcolor );
 			FreeImage_SetPixelColor( outbitmap, x, y, &pixcolor );
 		}
 	}

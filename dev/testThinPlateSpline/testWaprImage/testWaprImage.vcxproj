@@ -49,7 +49,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:/Lib/freeimage/Dist/x64;../../../../Common/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/Lib/freeimage/Dist/x64;../../../</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -65,7 +65,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:/Lib/freeimage/Dist/x64;../../../../Common/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:/Lib/freeimage/Dist/x64;../../../</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,11 +76,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\testThinPlateSpline\testWaprImage_main.cpp" />
-    <ClCompile Include="..\..\..\Source\testThinPlateSpline\ThinPlateSpline.cpp" />
+    <ClCompile Include="..\..\..\test\testThinPlateSpline\testWaprImage_main.cpp" />
+    <ClCompile Include="..\..\..\test\testThinPlateSpline\ThinPlateSpline.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\testThinPlateSpline\ThinPlateSpline.h" />
+    <ClInclude Include="..\..\..\test\testThinPlateSpline\ThinPlateSpline.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

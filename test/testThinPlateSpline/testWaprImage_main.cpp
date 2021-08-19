@@ -17,8 +17,8 @@ int main()
 
 	//====================== Read Image ======================//
 
-	FREE_IMAGE_FORMAT fif	= FreeImage_GetFileType("V:/sampleimages/image.png", 0);
-	FIBITMAP* bitmap = FreeImage_Load( fif, "V:/sampleimages/image.png" );
+	FREE_IMAGE_FORMAT fif	= FreeImage_GetFileType( "../../../test/images/checkerboard.png", 0 );
+	FIBITMAP* bitmap = FreeImage_Load( fif, "../../../test/images/checkerboard.png" );
 
 	unsigned width	= FreeImage_GetWidth( bitmap );
 	unsigned height	= FreeImage_GetHeight( bitmap );

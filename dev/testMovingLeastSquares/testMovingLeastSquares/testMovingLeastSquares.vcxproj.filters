@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\testMovingLeastSquares\MovingLeastSquares.cpp">
+    <ClCompile Include="..\..\..\test\testMovingLeastSquares\testMovingLeastSquares_main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\testMovingLeastSquares\testMovingLeastSquares_main.cpp">
+    <ClCompile Include="..\..\..\test\testMovingLeastSquares\MovingLeastSquares.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\MovingLeastSquares.h">
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\IDeformer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\IDeformer.h">
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\IMeshGrid.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Source\testMovingLeastSquares\IMeshGrid.h">
+    <ClInclude Include="..\..\..\test\testMovingLeastSquares\MovingLeastSquares.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

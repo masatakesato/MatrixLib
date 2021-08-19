@@ -48,9 +48,9 @@ void ThinPlateSpline::Init( int numDim, int numControlPoints )
 	m_NumControlPoints	= numControlPoints;
 	m_MatSize			= numControlPoints + 1 + numDim;
 
-	m_A.Allocate( m_MatSize, m_MatSize );
-	m_x.Allocate( m_MatSize, m_Dim );
-	m_b.Allocate( m_MatSize, m_Dim );
+	m_A.Init( m_MatSize, m_MatSize );
+	m_x.Init( m_MatSize, m_Dim );
+	m_b.Init( m_MatSize, m_Dim );
 
 	m_K.Init( m_A, 0, 0, m_NumControlPoints, m_NumControlPoints );	// Reference to K part of TPS matrix
 	m_P.Init( m_A, 0, m_NumControlPoints+1, m_NumControlPoints, m_Dim );// Reference to P part of TPS matrix (except first column filled with 1)
@@ -59,7 +59,7 @@ void ThinPlateSpline::Init( int numDim, int numControlPoints )
 	m_w.Init( m_x, 0, 0, m_NumControlPoints, m_Dim );// Reference to w part of x
 	m_a.Init( m_x, m_NumControlPoints, 0, m_Dim+1, m_Dim );// Reference to a part of x
 
-	m_U.Allocate( 1, m_NumControlPoints );
+	m_U.Init( 1, m_NumControlPoints );
 
 
 	// fill-in fixed values to A
