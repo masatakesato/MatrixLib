@@ -47,6 +47,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testSharedPtr", "testShared
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testUniquePtr", "testUniquePtr\testUniquePtr.vcxproj", "{2EABDCDA-F194-42CA-BD02-F92A61DFAB9F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testPerformance", "testPerformance\testPerformance.vcxproj", "{4904988F-BC11-429E-BBF8-05A74C032BDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,10 @@ Global
 		{2EABDCDA-F194-42CA-BD02-F92A61DFAB9F}.Debug|x64.Build.0 = Debug|x64
 		{2EABDCDA-F194-42CA-BD02-F92A61DFAB9F}.Release|x64.ActiveCfg = Release|x64
 		{2EABDCDA-F194-42CA-BD02-F92A61DFAB9F}.Release|x64.Build.0 = Release|x64
+		{4904988F-BC11-429E-BBF8-05A74C032BDB}.Debug|x64.ActiveCfg = Debug|x64
+		{4904988F-BC11-429E-BBF8-05A74C032BDB}.Debug|x64.Build.0 = Debug|x64
+		{4904988F-BC11-429E-BBF8-05A74C032BDB}.Release|x64.ActiveCfg = Release|x64
+		{4904988F-BC11-429E-BBF8-05A74C032BDB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
