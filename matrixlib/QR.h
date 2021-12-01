@@ -2,6 +2,7 @@
 #define	QR_H
 
 #include	<oreore/mathlib/MathLib.h>
+#include	<oreore/algorithm/Algorithm.h>
 
 //#include	"Matrix.h"
 #include	"Substitution.h"
@@ -170,7 +171,7 @@ inline int QR_ColumnPivotHouseholder( IMatrix<T>& v, OreOreLib::Array<T>& rs, /*
 		//tcout << tendl;
 
 		// find j = argmax from rs[k:n]
-		int j = (int)ArgMax( rs.begin()+k, rs.end() ) + k;
+		int j = (int)OreOreLib::ArgMax( rs.begin()+k, rs.end() ) + k;
 		if( rs[j] < epsilon )
 			break;
 		// Swap row k and j of rs

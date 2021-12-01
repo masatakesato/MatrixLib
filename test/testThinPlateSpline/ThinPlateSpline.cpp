@@ -129,7 +129,7 @@ void ThinPlateSpline::Update( OreOreLib::Array<Vec2f>& controlPoints )
 
 void ThinPlateSpline::Solve( OreOreLib::Array<Vec2f>& targetPoints )
 {
-	for( int i=0; i<Min( targetPoints.Length(), m_NumControlPoints ); ++i )
+	for( int i=0; i<Min( (int)targetPoints.Length(), m_NumControlPoints ); ++i )
 	{
 		m_b(i, 0) = targetPoints[i].x;
 		m_b(i, 1) = targetPoints[i].y;

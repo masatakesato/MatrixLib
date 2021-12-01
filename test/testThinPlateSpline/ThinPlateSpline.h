@@ -2,7 +2,7 @@
 #define	THIN_PLATE_SPLINE_H
 
 
-#include	<oreore/MathLib.h>
+#include	<oreore/mathlib/GraphicsMath.h>
 
 #include	<matrixlib/MatrixLib.h>
 #include	<matrixlib/LU.h>
